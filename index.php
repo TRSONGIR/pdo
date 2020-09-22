@@ -4,7 +4,5 @@ try{
 }catch (PDOException $e){
     die($e->getMessage());
 }
-$statment = $pdo->prepare("SELECT * FROM serials");
+$statment = $pdo->prepare("INSERT INTO serials (imdbid,persianname,poster,pach) VALUES ('tt12439466','تو درم را بزن','https://www.medyakoridoru.com/wp-content/uploads/2020/06/30/30062020091323_1377223_9_13.jpg','sencalkamimi')");
 $statment->execute();
-$serials = $statment->fetchAll();
-print_r($serials);
