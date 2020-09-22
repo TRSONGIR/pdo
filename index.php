@@ -4,5 +4,5 @@ try{
 }catch (PDOException $e){
     die($e->getMessage());
 }
-$statment = $pdo->prepare("INSERT INTO serials (imdbid,persianname,poster,quality,pach) VALUES ('tt7431994','گودال','https://m.media-amazon.com/images/M/MV5BZDg3MDA2ZDktOWQ1OS00ZmNmLThmNDgtNzhmNTgwY2VhOTkyXkEyXkFqcGdeQXVyOTQ1Mzg0Mzg@._V1_.jpg','480p','cukur')");
+$statment = $pdo->prepare("INSERT INTO serials (imdbid,persianname,poster,pach) VALUES ('tt12439466','تو درم را بزن','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc3JRd5ZGRRAtrzzs8vDO3gFtV12ds8UJlWw&usqp=CAU','sencalkapimi')");
 $statment->execute();
