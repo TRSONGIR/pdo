@@ -4,5 +4,7 @@ try{
 }catch (PDOException $e){
     die($e->getMessage());
 }
-$statment = $pdo->prepare("INSERT INTO serials (imdbid,persianname,poster,pach) VALUES ('tt12439466','تو درم را بزن','https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc3JRd5ZGRRAtrzzs8vDO3gFtV12ds8UJlWw&usqp=CAU','sencalkapimi')");
+$statment = $pdo->prepare("SELECT * FROM serials");
 $statment->execute();
+$serials = $statment->fetchAll();
+print_r($serials);
