@@ -4,3 +4,5 @@ try{
 }catch (PDOException $e){
     die($e->getMessage());
 }
+$statment = $pdo->prepare("INSERT INTO serials (imdbid,persianname,poster,quality,pach) VALUES ('tt7431994','گودال','https://m.media-amazon.com/images/M/MV5BZDg3MDA2ZDktOWQ1OS00ZmNmLThmNDgtNzhmNTgwY2VhOTkyXkEyXkFqcGdeQXVyOTQ1Mzg0Mzg@._V1_.jpg','480p','cukur')");
+$statment->execute();
